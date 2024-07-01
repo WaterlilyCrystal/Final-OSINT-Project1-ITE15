@@ -9,8 +9,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>22</maven.compiler.source>
-        <maven.compiler.target>22</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -34,7 +34,7 @@
             </activation>
             <properties>
                 <sonar.host.url>http://localhost:9000</sonar.host.url>
-                <sonar.login> sqp_230fbc9ebfade85d1b787fb6a86cd77918b255e6</sonar.login>
+                <sonar.login>sqp_99ae94c36495018155bd6a964c467ca8727c98e3</sonar.login>
             </properties>
         </profile>
     </profiles>
