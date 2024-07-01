@@ -11,9 +11,13 @@ import java.util.List;
 
 public class AirtableWriter {
 
-    private static final String BASE_ID = "app6ftijp1MtmwT5O";
-    private static final String API_KEY = "pat3q6HMpKD2WwH5J.db254f8cfc6a4187086c14f6ad4ae481c9bb3526515115b99333a7484cafe596";
-    private static final String TABLE_NAME = "Imported table";
+    Properties properties = new Properties();
+    properties.load(new FileInputStream("config.properties"));
+
+    private static final String BASE_ID = properties.getProperty("BASE_ID");
+    private static final String API_KEY = properties.getProperty("API_KEY");
+
+    private static final String TABLE_NAME = "SpiderumUsers";
 
     public static void main(String[] args) throws IOException {
         List<String[]> csvData = readCSVFile("SInfor.csv");
