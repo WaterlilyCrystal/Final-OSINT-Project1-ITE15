@@ -1,0 +1,7 @@
+
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¦àÌ¦úÿÿÿÿ8½å†2J$c8837c7d-151a-45c1-a878-23a717f5cd28
+
+java:S1450"[Remove the "submitButton" field and declare it as a local variable in the relevant methods.(í—ü„8şô¨å†2J$6908454f-3587-4e9d-aa29-0fa84c9e7977
+Œ
+java:S3252!"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(¢¡´8Äå†2J$e510b3f3-2296-47b7-aff5-cfcdec63fc92
+ƒ	java:S125P"<This block of commented-out lines of code should be removed.(Õö÷×ıÿÿÿÿ8ùø¢å†2J$97b81958-ac1e-406e-be93-e05998c47fcf

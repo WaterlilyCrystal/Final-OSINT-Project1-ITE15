@@ -1,0 +1,8 @@
+
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¯·úÿÿÿÿÿJ$8551b0b1-e42a-416a-b74c-bc731f1edf9a
+v
+java:S1141"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿJ$727da261-0227-4795-91ed-bfe91bcd0ab3
+‹
+java:S1192'"ODefine a constant instead of duplicating this literal "social_account" 3 times.(„¹¤µJ$fd4d7796-3759-4478-9aab-95b37442d2f0
+l
+java:S1874"+Remove this use of "URL"; it is deprecated.(÷ÊõøşÿÿÿÿJ$b63afba2-d5e8-4f48-861d-f845a8eba83e

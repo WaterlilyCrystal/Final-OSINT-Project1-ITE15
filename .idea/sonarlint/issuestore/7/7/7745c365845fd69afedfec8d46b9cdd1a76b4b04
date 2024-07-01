@@ -1,0 +1,6 @@
+
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(•ÿ™ÌùÿÿÿÿJ$70f8e9ad-6b01-492a-b457-f0592a7c9abf
+€
+java:S1874"?Remove this use of "withFirstRecordAsHeader"; it is deprecated.(Ó—÷ùÿÿÿÿJ$37b8bd23-58e2-4d3f-9290-f215069fdece
+
+java:S32524"LUse static access with "org.knowm.xchart.style.Styler" for "LegendPosition".(ÑÉ±ºùÿÿÿÿJ$832ee8b8-2a34-4227-9fee-4c479a47bc17

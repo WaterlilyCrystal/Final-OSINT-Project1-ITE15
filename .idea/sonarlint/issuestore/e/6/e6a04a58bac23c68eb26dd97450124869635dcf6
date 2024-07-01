@@ -1,0 +1,11 @@
+
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¯·úÿÿÿÿÿ8“ÚÃâ†2J$b2beb5f0-f72f-4744-9040-fdae9d9fd0f2
+	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8™ÚÃâ†2J$405a2da7-21af-4041-aaca-23b51000279a
+q
+java:S1874?".Remove this use of "create"; it is deprecated.(à½—Ì8¿ÚÃâ†2J$d90c3bd2-8d84-4549-8bb2-11031a2fe04a
+m	java:S106J"+Replace this use of System.out by a logger.(Ø“ÜØ8ÄÚÃâ†2J$7f314c0d-bd2c-48cc-b25d-5415c9f5ef8e
+m	java:S106M"+Replace this use of System.out by a logger.( ÇÇÓ8ÅÚÃâ†2J$cb225dbe-0e07-47d5-81eb-a525025c657a
+m	java:S106P"+Replace this use of System.out by a logger.(çÑ–¯8ÇÚÃâ†2J$f1556b9e-347f-4abf-bbde-e33fe345149b
+q
+java:S1874Z".Remove this use of "create"; it is deprecated.(â‘‰õ8ÈÚÃâ†2J$f69d57ab-2483-4c5c-956f-2fec1b00b92e
+r	java:S106d"+Replace this use of System.out by a logger.(õßş¨üÿÿÿÿ8ÊÚÃâ†2J$a178fa65-c2ce-498f-a2af-a9e50ff382d8

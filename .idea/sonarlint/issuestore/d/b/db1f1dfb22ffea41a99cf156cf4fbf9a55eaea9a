@@ -1,0 +1,16 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(öµ•ëûÿÿÿÿ
+^
+java:S1192"HDefine a constant instead of duplicating this literal "200-500" 3 times.(¶±Õî
+^
+java:S1192"HDefine a constant instead of duplicating this literal "100-200" 3 times.(®±»À
+a
+java:S1192"FDefine a constant instead of duplicating this literal "0-100" 3 times.(İŞ¹şÿÿÿÿ
+_
+java:S1192"IDefine a constant instead of duplicating this literal "500-1000" 3 times.(ØÌ÷Ï
+\
+java:S1192"FDefine a constant instead of duplicating this literal ">1000" 3 times.(–é­Û
+Z
+java:S1874 "?Remove this use of "withFirstRecordAsHeader"; it is deprecated.(Ó—÷ùÿÿÿÿ
+U
+java:S6213"":Rename this variable to not match a restricted identifier.(”Ğ¯Íûÿÿÿÿ

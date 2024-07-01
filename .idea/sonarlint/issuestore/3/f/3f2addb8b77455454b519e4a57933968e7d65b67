@@ -1,0 +1,7 @@
+
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¯·úÿÿÿÿÿJ$2238c47f-a59f-48ff-8d00-1dab98861267
+{
+java:S1118":Add a private constructor to hide the implicit public one.(½¤ŸäüÿÿÿÿJ$3734a03d-1b57-4848-be88-84eb485a06f9
+l
+java:S1874"+Remove this use of "URL"; it is deprecated.(…ª€ŒøÿÿÿÿJ$ea740a81-18d9-47d0-b047-d9c4a441f2b2
+k	java:S106#"+Replace this use of System.err by a logger.(¾øİúıÿÿÿÿJ$ca72cf62-df5c-4436-bdeb-c67c623d857b

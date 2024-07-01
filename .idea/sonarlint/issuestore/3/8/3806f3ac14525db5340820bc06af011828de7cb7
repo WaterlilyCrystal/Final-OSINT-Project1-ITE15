@@ -1,0 +1,5 @@
+
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(— î‰J$e4857278-0a91-4e5e-b668-a1a9c35cd0ac
+l
+java:S1874"+Remove this use of "URL"; it is deprecated.(…ª€ŒøÿÿÿÿJ$92f3f005-2756-41e4-ae9b-b8e493e3cc4d
+k	java:S106&"+Replace this use of System.err by a logger.(¾øÝúýÿÿÿÿJ$cb06cebd-9cc3-4be9-b4b1-5456a983ba4a

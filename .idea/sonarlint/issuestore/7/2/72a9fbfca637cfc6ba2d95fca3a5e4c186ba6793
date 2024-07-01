@@ -1,0 +1,13 @@
+
+C
+java:S16045"(Make this anonymous inner class a lambda(Ï¹ÿîúÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(—ÃÖÌøÿÿÿÿ
+q
+java:S1450"[Remove the "submitButton" field and declare it as a local variable in the relevant methods.(í—ü„
+_
+java:S3252#"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(¢¡´
+M
+java:S6126B"2Replace this String concatenation with Text block.(åËù«şÿÿÿÿ
+V	java:S125T"<This block of commented-out lines of code should be removed.(Õö÷×ıÿÿÿÿ
+M
+java:S6126g"2Replace this String concatenation with Text block.(ˆüÛåùÿÿÿÿ
