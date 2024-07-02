@@ -4,30 +4,36 @@ import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
 import okhttp3.*;
 import org.json.JSONObject;
+
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 public class AirtableWriter {
+    private final String baseId;
+    private final String apiKey;
+    private final String tableName;
+    private static final String AIRTABLE_API_URL = "https://api.airtable.com/v0/";
+    private static final String MEDIA_TYPE_JSON = "application/json";
+    private static final OkHttpClient client = new OkHttpClient();
 
-    Properties properties = new Properties();
-    properties.load(new FileInputStream("config.properties"));
+    public AirtableWriter(String baseId, String apiKey, String tableName) {
+        this.baseId = baseId;
+        this.apiKey = apiKey;
+        this.tableName = tableName;
+    }
 
-    private static final String BASE_ID = properties.getProperty("BASE_ID");
-    private static final String API_KEY = properties.getProperty("API_KEY");
-
-    private static final String TABLE_NAME = "SpiderumUsers";
-
-    public static void main(String[] args) throws IOException {
-        List<String[]> csvData = readCSVFile("SInfor.csv");
+    public void processDataFromCSV(String csvFilePath) throws IOException {
+        List<String[]> csvData = readCSVFile(csvFilePath);
         // Skip header row
         List<String[]> dataWithoutHeader = csvData.subList(1, csvData.size());
         createTable();
         insertRecords(dataWithoutHeader);
     }
 
-    private static List<String[]> readCSVFile(String filePath) throws IOException {
+    private List<String[]> readCSVFile(String filePath) throws IOException {
         try (CSVReader reader = new CSVReader(new FileReader(filePath))) {
             return reader.readAll();
         } catch (CsvException e) {
@@ -35,10 +41,25 @@ public class AirtableWriter {
         }
     }
 
-    static final String A="application/json";
-    private static void insertRecords(List<String[]> csvData) throws IOException {
-        OkHttpClient client = new OkHttpClient();
-        MediaType mediaType = MediaType.parse(A);
+    private void createTable() throws IOException {
+        MediaType mediaType = MediaType.parse(MEDIA_TYPE_JSON);
+
+        RequestBody body = RequestBody.create(mediaType,
+                "{\"fields\":{\"Name\":\"Name\",\"UserId\":\"UserId\",\"SocialAccount\":\"SocialAccount\",\"Gender\":\"Gender\",\"Score\":\"Score\",\"Comments\":\"Comments\",\"Followers\":\"Followers\",\"Followings\":\"Followings\",\"CreatedPosts\":\"CreatedPosts\"}}");
+
+        Request request = new Request.Builder()
+                .url(AIRTABLE_API_URL + baseId + "/" + tableName)
+                .post(body)
+                .addHeader("Authorization", "Bearer " + apiKey)
+                .addHeader("Content-Type", MEDIA_TYPE_JSON)
+                .build();
+
+        Response response = client.newCall(request).execute();
+        System.out.println(response.body().string());
+    }
+
+    private void insertRecords(List<String[]> csvData) throws IOException {
+        MediaType mediaType = MediaType.parse(MEDIA_TYPE_JSON);
 
         for (String[] row : csvData) {
             try {
@@ -69,10 +90,10 @@ public class AirtableWriter {
                 RequestBody requestBodyObject = RequestBody.create(mediaType, requestBody.toString());
 
                 Request request = new Request.Builder()
-                        .url("https://api.airtable.com/v0/" + BASE_ID + "/" + TABLE_NAME)
+                        .url(AIRTABLE_API_URL + baseId + "/" + tableName)
                         .post(requestBodyObject)
-                        .addHeader("Authorization", "Bearer " + API_KEY)
-                        .addHeader("Content-Type", A)
+                        .addHeader("Authorization", "Bearer " + apiKey)
+                        .addHeader("Content-Type", MEDIA_TYPE_JSON)
                         .build();
 
                 Response response = client.newCall(request).execute();
@@ -89,22 +110,21 @@ public class AirtableWriter {
         }
     }
 
-    private static void createTable() throws IOException {
-        OkHttpClient client = new OkHttpClient();
-        MediaType mediaType = MediaType.parse(A);
+    public static void main(String[] args) throws IOException {
+        Scanner scanner = new Scanner(System.in);
 
-        RequestBody body = RequestBody.create(mediaType, "{\"fields\":{\"Name\":\"Name\",\"UserId\":\"UserId\",\"SocialAccount\":\"SocialAccount\",\"Gender\":\"Gender\",\"Score\":\"Score\",\"Comments\":\"Comments\",\"Followers\":\"Followers\",\"Followings\":\"Followings\",\"CreatedPosts\":\"CreatedPosts\"}}");
+        System.out.print("Please enter Base ID: ");
+        String baseId = scanner.nextLine().trim();
 
-        Request request = new Request.Builder()
-                .url("https://api.airtable.com/v0/" + BASE_ID + "/" + TABLE_NAME)
-                .post(body)
-                .addHeader("Authorization", "Bearer " + API_KEY)
-                .addHeader("Content-Type", A)
-                .build();
+        System.out.print("Please enter API Key: ");
+        String apiKey = scanner.nextLine().trim();
 
-        Response response = client.newCall(request).execute();
-        System.out.println(response.body().string());
+        System.out.print("Please enter Table name: ");
+        String tableName = scanner.nextLine().trim();
+
+        AirtableWriter airtableWriter = new AirtableWriter(baseId, apiKey, tableName);
+        airtableWriter.processDataFromCSV("SInfor.csv");
+
+        scanner.close();
     }
 }
-
-
