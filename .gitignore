@@ -34,7 +34,8 @@ build/
 ### VS Code ###
 .vscode/
 
-config.properties
 
 ### Mac OS ###
 .DS_Store
+pom.xml
+
